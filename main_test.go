@@ -8,8 +8,9 @@ func Test_bonus(t *testing.T) {
 		sales []int
 		want int
 	}{
-		{"Have bonus", []int{12_000, 8_000, 15_000, 8_000}, 350},
-		{"No bonus", []int{1_000, 100, 2, 8_000}, 0},
+		//{"bonus received", []int{12_000, 8_000, 15_000, 8_000}, 350},
+		{"for all", []int{12_000, 8_000, 15_000, 8_000}, 350},
+		{"Nothing", []int{10_000, 10_000,}, 0},
 	}
 	for _, test := range tests {
 		got := bonus(test.sales)
